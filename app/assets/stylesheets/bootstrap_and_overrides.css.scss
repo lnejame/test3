@@ -1,0 +1,87 @@
+$navbarBackground: #FAFAFA;
+$navbarBackgroundHighlight: #C9C9C9;
+$navbarText: #858585;
+$navbarLinkColor: #858585;
+
+@import "bootstrap";
+
+body { padding-top: 60px; }
+
+@import "bootstrap-responsive";
+
+.navbar .brand {
+  color: #00AEEF;
+}
+
+textarea {
+  height: 100px;
+  width: 500px;
+}
+
+
+label.collection_radio_buttons {
+  float: none;
+  margin: 0;
+  vertical-align: -2px;
+  margin-left: 2px;
+}
+
+h3 {
+    color: #00AEEF;
+}
+input::-webkit-input {
+  border: thick
+}
+
+input::-webkit-input-placeholder {
+  font-style: italic
+}
+textarea::-webkit-input-placeholder {
+  font-style: italic
+}
+
+
+/* footer */
+footer {
+margin-top: 45px;
+padding-top: 5px;
+color: $grayLight;
+a {
+color: $gray;
+&:hover {
+color: $grayDarker;
+}
+}
+small {
+float: left;
+}
+ul {
+float: right;
+list-style: none;
+li {
+float: left;
+margin-left: 10px;
+}
+}
+}
+h5 {
+  text-decoration: underline;
+}
+
+/* button */
+.btn-primary-custom {
+  background-color: hsl(188, 100%, 33%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0fdfff", endColorstr="#0091a8");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#0fdfff), to(#0091a8));
+  background-image: -moz-linear-gradient(top, #0fdfff, #0091a8);
+  background-image: -ms-linear-gradient(top, #0fdfff, #0091a8);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0fdfff), color-stop(100%, #0091a8));
+  background-image: -webkit-linear-gradient(top, #0fdfff, #0091a8);
+  background-image: -o-linear-gradient(top, #0fdfff, #0091a8);
+  background-image: linear-gradient(#0fdfff, #0091a8);
+  border-color: #0091a8 #0091a8 hsl(188, 100%, 28%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
+  -webkit-font-smoothing: antialiased;
+}
