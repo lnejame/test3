@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "CIW" %></title>
+    <title><%=  yield(:title) %></title>
     <meta name="description" content="">
     <meta name="author" content="">
     <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -30,14 +30,14 @@
             <div class="container">
               <% if user_signed_in? %>
               <ul class="nav pull-right">
-                <li><%= current_user.email %></li>
-                <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
+                <li><%= link_to current_user.email, edit_user_registration_path %></li>
+                <li><%= link_to 'List', info_forms_path %></li>
                 <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
               </ul>
               <% else %>
               <ul class="nav pull-right">
-                <li><%= link_to "Sign up", new_user_registration_path %></li>
                 <li><%= link_to "Login", new_user_session_path %></li>
+                <li><%= link_to "|", new_user_registration_path %></li>
               </ul>
             <% end %>
             </div>

@@ -10,6 +10,8 @@ Test3::Application.routes.draw do
   get "pages/help"
 
   get "pages/contact"
+  
+  get "pages/thankyou"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

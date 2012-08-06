@@ -20,6 +20,8 @@ class InfoFormsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @info_forms }
+      format.csv { render text: @info_forms.to_csv }
+      format.xls
     end
   end
 
@@ -31,6 +33,7 @@ class InfoFormsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @info_form }
+      format.pdf
     end
   end
 
@@ -50,8 +53,7 @@ class InfoFormsController < ApplicationController
 
     respond_to do |format|
       if @info_form.save
-        format.html { redirect_to @info_form, notice: 'Info form was successfully created.' }
-        format.json { render json: @info_form, status: :created, location: @info_form }
+        format.html { redirect_to "/pages/thankyou", notice: 'Project Profile Submitted!' }
       else
         format.html { render action: "new" }
         format.json { render json: @info_form.errors, status: :unprocessable_entity }

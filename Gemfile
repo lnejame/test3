@@ -10,6 +10,8 @@ gem 'simple_form'
 gem 'devise'
 gem 'sunspot_rails'
 gem 'sunspot_solr'
+gem 'pdfkit'
+gem 'wkhtmltopdf'
 
 group :production do
   gem 'heroku'
